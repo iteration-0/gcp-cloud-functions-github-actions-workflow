@@ -1,7 +1,7 @@
 # Cloud Run - GitHub Actions
 
 An example workflow that uses [GitHub Actions][actions] to deploy a
-[Hello World Node.js app](index.js) to [Cloud Run][cloud-run].
+[Hello World Node.js app](http-get/index.js) to [Cloud Run][cloud-run].
 
 This code is intended to be an _example_. You will likely need to change or
 update values to match your setup.
