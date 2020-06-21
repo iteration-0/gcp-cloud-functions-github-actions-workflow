@@ -24,10 +24,11 @@ exports.oauthToken = (req, res) => {
       }
     })
       .then(function (response) {
-        console.log(response);
+        console.log("response....");
         res.send(response.data);
       })
       .catch(function (error) {
+        console.log("error....");
         console.log(error);
         res.status(500);
       });
