@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-exports.token = (req, res) => {
+exports.oauthToken = (req, res) => {
 
   res.set('Access-Control-Allow-Origin', '*');
 

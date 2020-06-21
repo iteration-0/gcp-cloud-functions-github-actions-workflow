@@ -22,7 +22,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
   RUN_REGION: us-central1
-  SERVICE_NAME: token
+  SERVICE_NAME: oauthToken
   REPO: github_iteration-0_gcp-cloud-functions-github-actions-workflow
 
 jobs:
