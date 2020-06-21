@@ -22,7 +22,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
   RUN_REGION: us-central1
-  SERVICE_NAME: helloGET
+  SERVICE_NAME: token
   REPO: github_iteration-0_gcp-cloud-functions-github-actions-workflow
 
 jobs:
@@ -46,7 +46,8 @@ jobs:
       run: |-
         gcloud functions deploy "$SERVICE_NAME" \
           --region "$RUN_REGION" \
-          --source "https://source.developers.google.com/projects/$PROJECT_ID/repos/$REPO/moveable-aliases/master/paths/http-get" \
+          --source "https://source.developers.google.com/projects/$PROJECT_ID/repos/$REPO/moveable-aliases/master/paths/oauth-token" \
           --trigger-http \
+          --memory 128MB \
           --runtime "nodejs10" \
           --allow-unauthenticated
