@@ -24,7 +24,7 @@ exports.oauthToken = (req, res) => {
       }
     })
       .then(function (response) {
-        res.send(response);
+        console.log(response);
         res.send(response.data);
       })
       .catch(function (error) {
