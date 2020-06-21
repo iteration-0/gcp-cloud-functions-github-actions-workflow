@@ -98,3 +98,12 @@ For pushes to the `master` branch, this workflow will:
 [sdk]: https://cloud.google.com/sdk
 [secrets]: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets
 [roles]: https://cloud.google.com/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource
+
+
+    gcloud functions deploy oauthToken \
+              --region us-central1 \
+              --source "https://source.developers.google.com/projects/gitaction/repos/github_iteration-0_gcp-cloud-functions-github-actions-workflow/moveable-aliases/master/paths/oauth-token" \
+              --trigger-http \
+              --memory 128MB \
+              --runtime "nodejs10" \
+              --allow-unauthenticated

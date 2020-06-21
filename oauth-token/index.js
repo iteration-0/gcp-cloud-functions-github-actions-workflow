@@ -19,11 +19,13 @@ exports.oauthToken = (req, res) => {
       state: req.body.state
     }, {
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     })
       .then(function (response) {
-        res.send(response.body);
+        res.send(response);
+        res.send(response.data);
       })
       .catch(function (error) {
         console.log(error);

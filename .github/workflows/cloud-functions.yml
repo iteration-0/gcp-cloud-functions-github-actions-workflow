@@ -46,7 +46,7 @@ jobs:
       run: |-
         gcloud functions deploy "$SERVICE_NAME" \
           --region "$RUN_REGION" \
-          --source "https://source.developers.google.com/projects/$PROJECT_ID/repos/$REPO/moveable-aliases/master/paths/oauth-token" \
+          --source "./oauth-token" \
           --trigger-http \
           --memory 128MB \
           --runtime "nodejs10" \
